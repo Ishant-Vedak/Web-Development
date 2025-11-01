@@ -1,0 +1,122 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+:root{
+    --background-color:white;
+}
+
+html, body{
+    overflow-x: hidden;
+    margin: 0;
+
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.norm{
+    border-style: dotted;
+    border-color: black;
+    border-width: 5px;
+
+    margin: 10px;
+}
+    
+    
+.image{
+    
+
+    fill: blue;
+    stroke: red;
+    stroke-width: 2px;
+}
+
+.path{
+     fill: black;
+}
+
+.path, .path2{
+    fill: white;
+    stroke: black;
+    stroke-width: 5px;
+    stroke-linecap: round;
+}
+
+
+
+.spacer{
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.layer{
+    background-image: url(./layered-waves-haikei.svg);
+}
+
+.image2{
+    fill: black;
+    stroke: black;
+    stroke-width: 5px;
+}
+
+/* Everything below for sharingan*/
+
+.sharingan{
+    display: flex;
+    flex-direction: column;
+}
+
+.S2C1{
+    fill: red;
+}
+
+.S2C2{
+    fill: red;
+}
+
+.S2C3{
+    fill: black;
+}
+
+.S2C4{
+    fill: black;
+}
+
+.rotating-part-cc{
+    transform-origin: 500px 500px;
+    animation:rotateCC 3s linear infinite reverse ;
+}
+
+@keyframes rotateCC {
+    0%{
+        rotate: 0deg;
+    }
+
+    100%{
+        rotate: 360deg;
+    }
+    
+}
+
+.stage{
+    transition: opacity 1s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.visible{
+    opacity: 1;
+    pointer-events: auto;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Javascript + SVG Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section>
+    <svg 
+        class="image norm"
+        width= "calc(300px)"
+        height="calc(300px)"
+        viewBox="0 0 200 200">
+
+
+        <circle cx="100" 
+                cy="100" 
+                r="50" 
+                fill="blue" 
+                stroke="red"
+                stroke-width="2px"/>
+
+        <path d="M 50 180 L 150 180"></path>
+    
+    </svg>
+
+    <svg
+        class="image norm"
+        width="300px"
+        height="300px"
+        viewBox="0 0 200 200"
+    >
+
+        <path
+            class="path"
+            d="
+
+                M 10 190 L 60 190 L 60 165 L 35 165 L 35 140 L 10 140 L 10 190
+
+                M 10 10 L 60 10 L 60 35 L 35 35 L 35 60 L 10 60 L 10 10 
+
+                M 190 10 L 190 60 L 165 60 L 165 35 L 140 35 L 140 10 L 190 10
+
+                M 190 190 L 140 190 L 140 165 L 165 165 L 165 140 L 190 140 L 190 190 
+            "
+        >
+
+        
+        </path>
+
+
+    </svg>
+
+    </section>
+
+    <div class="spacer layer"></div>
+
+
+    <section class="sharingan">
+    <svg
+        class="image2 norm"
+        width= "calc(500px)"
+        height="calc(500px)"
+        viewBox="0 0 1000 1000"
+        >
+
+        <g id="stage1" class="stage visible">
+            <circle 
+                cx="500"
+                cy="500"
+                r="400"
+                fill="black"
+                stroke="black"
+                stroke-width="5px"
+
+               
+            />
+
+        </g>  
+    
+        <g id="stage2" class="stage">
+            <circle 
+                cx="500"
+                cy="500"
+                r="400"
+                class="S2C1"
+            />
+
+            <g class="rotating-part-cc">
+
+                <circle 
+                    cx="500"
+                    cy="500"
+                    r="200"
+                    class="S2C2"
+                />
+
+                <g id="knot">
+                    <circle
+                        cx="500"
+                        cy="700"
+                        r="50"
+                        class="S2C3"
+                    />
+
+                    <path  d="M 550 700 Q 550 750 485 775 Q 520 755 515 745"></path>
+                    
+            
+                </g>
+            
+
+            </g>
+
+            <circle
+                cx="500"
+                cy="500"
+                r="50"
+                class="S2C4"
+                
+            />
+
+        </g>
+
+        <g id="stage3" class="stage">
+            <circle 
+                cx="500"
+                cy="500"
+                r="400"
+                class="S2C1"
+            />
+
+            <g class="rotating-part-cc">
+
+                <circle 
+                    cx="500"
+                    cy="500"
+                    r="200"
+                    class="S2C2"
+                />
+
+                <g id="knot">
+                    <circle
+                        cx="500"
+                        cy="700"
+                        r="50"
+                        class="S2C3"
+                    />
+
+                    <path  d="M 550 700 Q 550 750 485 775 Q 520 755 515 745"></path>
+                    
+            
+                </g>
+                
+                <use href="#knot" transform="rotate(180 500 500)"/>
+                
+
+            </g>
+
+            <circle
+                cx="500"
+                cy="500"
+                r="50"
+                class="S2C4"
+                
+            />
+
+        </g>
+        
+        <g id="stage4" class="stage">
+            <circle 
+                cx="500"
+                cy="500"
+                r="400"
+                class="S2C1"
+            />
+
+            <g class="rotating-part-cc">
+
+                <circle 
+                    cx="500"
+                    cy="500"
+                    r="200"
+                    class="S2C2"
+                />
+
+                <g id="knot">
+                    <circle
+                        cx="500"
+                        cy="700"
+                        r="50"
+                        class="S2C3"
+                    />
+
+                    <path  d="M 550 700 Q 550 750 485 775 Q 520 755 515 745"></path>
+                    
+            
+                </g>
+                
+                <use href="#knot" transform="rotate(120 500 500)"/>
+                <use href="#knot" transform="rotate(240 500 500)"/>
+
+            </g>
+
+            <circle
+                cx="500"
+                cy="500"
+                r="50"
+                class="S2C4"
+                
+            />
+
+        </g>
+        
+    </svg>
+
+    </section>
+    <script src="./script.js"></script>
+
+
+</body>
+</html>

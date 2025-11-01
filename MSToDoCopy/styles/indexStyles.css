@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* Element Styles*/
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    -webkit-tap-highlight-color: transparent;
+    color: var(--primary-text)
+}
+
+*::-webkit-scrollbar{
+    display: none;
+}
+
+/* These are all the light mode colors, kept here until I make the dark mode theme set*/
+/*
+.dark-mode{
+    --primary-color: rgb(26, 26, 26);
+    --notes-area-hover-light: rgb(205, 205, 205);
+
+    --note-bg-light: rgb(190,190,190);
+    --note-hover-light: rgb(175, 175, 175);
+
+
+    --nav-bar-bg-light: rgb(206, 206, 206);
+    --nav-bar-hover-light: rgb(255, 255, 255);
+
+    --add-note-bg-light: rgb(174, 174, 174);
+    --add-note-text: rgb(0, 0, 0);
+    --add-note-bg-transition-light: rgb(108, 108, 108);
+    --add-note-text-transition-light: rgb(255, 255, 255);
+
+    --right-prop-bg-light: rgb(156, 156, 156);
+}
+*/
+
+body{
+    display: flex;
+    flex-direction: row;
+
+    --primary-color: rgb(255, 255, 255);
+    --primary-text: black;
+    --notes-area-hover-light: oklch(from var(--primary-color) calc(l * 0.8)c h);
+
+    --note-bg-light: oklch(from var(--primary-color) calc(l * 0.8)c h);
+    --note-hover-light: oklch(from var(--primary-color) calc(l * 0.7)c h);
+
+    --nav-bar-bg-light: oklch(from var(--primary-color) calc(l * 0.8)c h);
+    --nav-bar-hover-light: oklch(from var(--primary-color) calc(l * 0.6)c h);
+
+    --add-note-bg-light: oklch(from var(--primary-color) calc(l * 0.7)c h);
+    --add-note-text: oklch(from var(--primary-color) calc(l - 100)c h);
+    --add-note-bg-transition-light: oklch(from var(--primary-color) calc(l * 0.5)c h);
+    --add-note-text-transition-light: oklch(from var(--primary-color) calc(100 - l)c h);
+
+    --right-prop-bg-light: oklch(from var(--primary-color) calc(l * 0.65)c h);
+}
+
+
+/* Class Styles*/
+
+.testing{
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+}
+
+
+.navigation-bar{
+    width: 20vw;
+    height: 100dvh;
+    border-right-style: solid;
+    border-color: black;
+    background-color: var(--nav-bar-bg-light);
+
+}
+
+.nav-bar-header{
+    height: 11%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    
+    padding-right: 5px;
+    padding-left: 5px;
+}
+/*
+.hamburger-menu{
+    aspect-ratio: 1 / 1;
+    height: 70%;
+    border-radius: 10%;
+
+    align-self: center;
+
+    border-color: transparent;
+    background-color: var(--nav-bar-bg-light);
+}
+
+.hamburger-menu:hover{
+    background-color: var(--nav-bar-hover-light);
+}
+
+.hamburger-menu-image{
+    aspect-ratio: 1 / 1;
+    height: 90%;
+}
+
+*/
+
+.search-bar{
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-input{
+    height: 80%;
+    width: 90%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+
+    background-color: var(--nav-bar-bg-light);
+
+    padding-left: 10px;
+}
+
+.search-bar-input::placeholder{
+    color: var(--primary-text);
+}
+
+.dark-mode-toggle{
+    height: 70%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10%;
+
+    border-color: transparent;
+    background-color: var(--nav-bar-bg-light);
+}
+
+.dark-mode-toggle:hover{
+    background-color: var(--nav-bar-hover-light);
+}
+
+.dark-mode-button{
+    height: 70%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Notes Area CSS */
+
+.notes-area{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 80vw;
+    height: 100dvh;
+
+    background-color: var(--primary-color);
+    
+}
+
+.notes-header{
+    height: fit-content;
+    width: 95%;
+
+    border-color: transparent;
+    border-style: solid;
+
+    display: flex;
+    flex-direction: row;
+
+    padding-right: 10px;
+    color: var(--primary-text);
+}
+
+.my-day{
+    height:fit-content;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+    
+}
+
+.day-and-date{
+    height: 20%;
+    font-weight: 700;
+}
+
+.filler{
+    display: inline-block;
+    flex: 1;
+    height: 100%;
+}
+
+.three-dots-menu{
+    height: 100%;
+    aspect-ratio: 1 / 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-color: transparent;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    
+}
+
+.three-dots-menu:hover{
+    background-color: var(--notes-area-hover-light);
+}
+
+.three-dots{
+    height:50%;
+    aspect-ratio: 1 /1 ;
+}
+
+.main{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 60px);
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 50%;
+
+    border-color: transparent;
+    border-style: solid;
+    width: 95%;
+
+    overflow-y: scroll;
+}
+
+.notes-input{
+    width: 95%;
+    height: 10%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+
+    border-color: transparent;
+
+    
+    
+    
+}
+.notes-input:focus-within{
+    border: transparent;
+    background-color: transparent;
+}
+.notes-input:hover, .notes-input:hover input, .notes-input:hover input::placeholder, .notes-input:hover div{
+    background-color: var(--add-note-bg-transition-light);
+    transition: color 0.3s ease;
+    color: var(--add-note-text-transition-light);
+}
+
+.plus-icon, .add-new-note{
+    background-color: var(--add-note-bg-light);
+
+    border-color: transparent;
+    border-style: solid;
+}
+
+.plus-icon{
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-new-note{
+    flex: 1;
+    height: 100%;
+
+    outline: none;
+    padding-left: 5px;
+}
+
+.add-new-note::placeholder{
+    color: var(--add-note-text);
+}
+

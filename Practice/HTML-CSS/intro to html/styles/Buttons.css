@@ -1,0 +1,46 @@
+body { 
+    background-color: aquamarine;
+}
+.Subscribe { 
+    background-color: rgb(239, 26, 26);
+    color: white;
+    border: none;
+    padding-top: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 12px;
+    border-radius: 1000px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-right: 10px;
+    vertical-align: top;
+}   
+
+.Subscribe:hover {
+    opacity: .66789;
+}
+.Subscribe:active{
+    opacity: 0.43412341;
+}
+
+.Join {
+    background-color: white;
+    border-color: red;
+    border-style: solid;
+    color: blue;
+    cursor: pointer;
+    transition: background-color 0.15s,
+    color 0.15s,
+    shadow 0.15s;
+    vertical-align: top;
+}
+
+.Join:hover {
+    background-color: blue;
+    color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .15);
+}
+
+.Join:active {
+    opacity: 0.72345235235;
+}

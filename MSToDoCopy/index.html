@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/indexStyles.css">
+    <link rel="stylesheet" href="styles/newNoteStyles.css">
+    <link rel="stylesheet" href="styles/noteProperties.css">
+    <link rel="stylesheet" href="styles/navListItems.css">
+    <title>MS To Do Copy</title>
+</head>
+<body>
+    <div class="navigation-bar">
+        <header class="nav-bar-header">
+            <!--<button class="hamburger-menu">
+                <img src="icons/hamburger_menu.svg" alt="Menu" class="hamburger-menu-image">
+            </button>-->
+            <section class="search-bar">
+                <input type="text" class="search-bar-input" placeholder="Search">
+            </section>
+            <button class="dark-mode-toggle" id="dark-mode-button" data-theme="light" alt="Enable Dark Mode">
+                <img src="icons/moon_image.svg"  class="dark-mode-button" >
+            </button>
+        </header>
+        <ol class="nav-bar-list" id="nav-bar-list"></ol>
+        <div class="add-list">
+            <div class="plus-nav">
+                <img src="icons/plus_icon.svg" class="plus-symbol-nav">
+            </div>
+            <input type="text" placeholder="Add List" class="add-new-list">
+        </div>
+        
+    </div>
+    <div class="notes-area">
+        <header class="notes-header">
+            <div class="day-stuff">
+                <h1 class="my-day" id="list-heading">
+                </h1>
+                <h4 class="day-and-date" id="day-and-date">
+                </h4>
+            </div>
+            <div class="filler"></div>
+            <button class="three-dots-menu">
+                <img src="icons/three_dots_hori.svg" class="three-dots">
+            </button>
+        </header>
+        <main class="main" id="main"></main> 
+        <footer class="notes-input">
+            <div class="plus-icon">
+                <img src="icons/plus_icon.svg">
+            </div>
+            <input type="text" class="add-new-note" id="add-new-note" placeholder="Add a New Note">
+        </footer>
+    </div>
+    
+    <aside class="right-sidebar" id="right-sidebar">
+          
+    </aside>
+    <script src="script.js" defer></script>
+</body>
+</html>

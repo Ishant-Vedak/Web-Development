@@ -1,0 +1,77 @@
+@import url(indexStyles.css);
+
+.note-card{
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+
+    border: 1px var(--note-hover-light) solid;
+
+    background-color: var(--note-bg-light);
+}
+.note-card:hover{
+    background-color: var(--note-hover-light);
+}
+.checkbox-container{
+    height: 60px;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.checkbox{
+    display: none;
+}
+
+.circle{
+    background: url('../icons/circle_unchecked.svg') center/cover ;
+    height: 50%;
+    aspect-ratio: 1/1;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.circle.checked{
+    background: url('../icons/circle_checked.svg') center/cover;
+}
+
+.circle.unchecked:hover {
+    background: url('../icons/circle_hover.svg') center/cover;
+}
+
+
+.note-header{
+    flex: 1;
+
+    padding-left: 15px;
+
+    display: flex;
+
+    text-align: left;
+    align-items: center;
+    color: var(--primary-text);
+    
+}
+
+
+.delete-note{
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    border-color: transparent;
+    background-color: transparent
+    
+}
+
+.delete-note:hover{
+    background-color: red;
+}
+
+
+

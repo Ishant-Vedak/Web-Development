@@ -1,0 +1,182 @@
+@import url(indexStyles.css);
+
+.right-sidebar{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--nav-bar-bg-light);
+    width: max(30%, 300px);
+    transform: translateX(100%);
+    /* transform: translateX(100%); */
+
+    padding: 0.5rem;
+    height: 100dvh;
+    
+}
+
+.right-sidebar.visible{
+    display: flex;
+    transform: translateX(0);
+}
+
+.right-common{
+    width: 90%;
+    overflow-wrap: break-word;
+
+    border-radius: 5px;
+    background-color: var(--right-prop-bg-light);
+
+}
+
+.right-heading, .add-note, .add-file {
+    padding: 5px 10px;
+}
+
+.right-top, .right-main, .right-bottom{
+   display: flex; 
+   width: 100%;
+}
+
+.right-top{
+    flex-direction: row;
+    height: 5%;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.right-filler{
+    height: 100%;
+    flex: 1;
+    
+}
+
+.add-fav {
+    height: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+}
+
+.right-main{
+    height: 90%;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+    overflow-y: scroll;
+}
+
+.right-heading{
+    height: 5rem;
+    text-align: center;
+}
+
+.add-file, .add-note{
+    height: fit-content
+}
+
+.add-file{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.note-details{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 0;
+    width: 100%;
+    overflow-wrap: break-word;
+    font-size: large;
+
+    background-color: transparent;
+    border-color: transparent;
+    resize: none;
+    overflow: hidden;
+}
+
+.note-details:focus{
+    outline: none;
+}
+
+.note-details::placeholder{
+    color: var(--primary-text);
+}
+
+.files-list{
+    display: none;
+    height: auto;
+    gap: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.files-list-item{
+    height: auto;
+    text-align: center;
+    align-content: center;
+    overflow-wrap: break-word;
+}
+
+.add-file-btn{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    height: 40px;
+}
+
+.files-list:hover, .add-file-btn:hover{
+    background-color: var(--add-note-bg-transition-light);
+    transition: color 0.1s ease;
+    color: var(--add-note-text-transition-light);
+}
+
+.right-plus-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.right-plus{
+    height: 50%;
+    aspect-ratio: 1/1;
+}
+
+.note-files{
+    background-color: transparent;
+    border: none;
+
+    height: 90%;
+}
+
+.note-files-label{
+    font-size:large;
+    flex: 1;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-bottom{
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.date-created{
+    width: 90%;
+    padding: 5px 10px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+
+

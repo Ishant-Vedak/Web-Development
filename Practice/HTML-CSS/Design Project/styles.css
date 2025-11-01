@@ -1,0 +1,181 @@
+@import url(animations.css);
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow: hidden;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+
+    background-color: var(--bg-color);
+
+    margin: 0;
+    
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Right-Side, .Center, .Left-Side{
+    height: 100vh;
+
+    margin: 0;
+}
+
+.Right-Side, .Left-Side{
+    width: 30vw;
+}
+
+.Center, .Right-Side, .Left-Side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right Side */
+
+.Text-Display{
+    height: 30vh;
+    width: 20vw;
+
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+/* Center */
+
+.Center{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    
+}
+
+.E{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    aspect-ratio: 1 / 1;
+
+    width: 80vh;
+    height: 80vh;
+    border-color: var(--primary-color);
+    border-style: dashed;
+    border-width: 4px;
+    border-radius: 100%;
+
+    position: relative;
+
+}
+
+.i, .ii{
+    animation:linear infinite normal;
+}
+
+.i{ 
+    animation-name: rotateRight;
+    animation-duration: 16s;
+}
+
+.ii{
+    animation-name: rotateLeft;
+    animation-duration: 16s;
+}
+
+.E1i{
+    margin: 1em;
+
+    animation-duration: 18 s;
+
+}
+
+.E1ii{
+    height: 70vh;
+    width: 70vh;
+
+    animation-duration: 12s;
+
+    
+}
+
+.E2{
+    border-color: var(--secondary-color);
+}
+
+.E2i{
+    height: 60vh;
+    width:60vh;
+
+    animation-duration: 19s;
+}
+
+.E2ii{
+    height: 50vh;
+    width: 50vh;
+
+    animation-duration: 14 s;
+}
+
+.E3{
+    border-color: var(--tertiary-color);
+}
+
+.E3i{
+    height: 40vh;
+    width: 40vh;
+   
+}
+
+.E3ii{
+    height: 30vh;
+    width: 30vh;
+   
+}
+
+
+/* Parts that are on the rotating circles */
+
+.P{
+    
+    position: absolute;
+    border-radius: 100%;
+
+    top: calc(100% + 2px);
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.P1{
+    height: 20px;
+    width: 20px;
+    border: var(--tertiary-color) solid 1px ;
+    box-shadow: 0px 0px 10px 2px var(--tertiary-color);
+    background-color: var(--tertiary-color);
+}
+
+.P2{
+    height: 10px;
+    width: 10px;
+    border: var(--secondary-color) solid 1px ;
+    box-shadow: 0px 0px 10px 2px var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+
+.P3{
+    height: 15px;
+    width: 15px;
+    border: var(--primary-color) solid 1px ;
+    box-shadow: 0px 0px 10px 2px var(--primary-color);
+    background-color: var(--primary-color);
+}

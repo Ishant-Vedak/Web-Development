@@ -1,0 +1,25 @@
+body{
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1000px;
+
+}
+
+.box{
+    background-color: blue;
+}
+
+.grid-container{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+    gap: 1em;
+    grid-template-areas: 
+    "B1 B2 B2 B3" 
+    "B1 B4 B5 B5";
+    position:sticky;
+    top: 20px;
+}
