@@ -1,6 +1,6 @@
 # Hello, I am Ishant 👋
 
-This repo shows my web development experience, and practice in other languages as well.
+This repo shows my web development experience, including projects and practice.
 
 ## Main Projects
 These are the main projects that best show my web development skill:
@@ -11,4 +11,4 @@ These are the main projects that best show my web development skill:
 
 ## Practice Exercises and Small Projects
 
-In my Practice folder, I have small exercises to understand different topics in HTML, CSS, and Javascript.
+In my [Practice](/Practice/) folder, I have small exercises to understand different topics in HTML, CSS, and Javascript.
